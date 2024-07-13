@@ -28,14 +28,8 @@ const MeetingPage = () => {
   useEffect(() => {
     //
     call?.camera?.disable();
-    //
-    if (owner && call) {
-      call && call?.microphone?.enable();
-      // alert('microphone enabled');
-    } else {
-      call && call?.microphone.disable();
-      // alert('microphone disabled');
-    }
+    call && call?.microphone.enable();
+   
     call && call.join();
     // if (isMicCamToggled) {
     //   call.camera.disable();
